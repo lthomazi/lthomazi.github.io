@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lucas Thomazi</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet" />
+
+        <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+    </head>
+
+    <body class="blue bottom">
+        <a href="index.html">Back to main page</a>  
+       
+        <h1>Sudoku Solver</h1>
+       
+        <p>I was bored over summer break and decided to play some Sudoku. Turns out i'm not very good at it; so I made this.</p>
+        <p>
+            My approach: go through all the empty spaces in the grid, and keep trying numbers
+            till we have a valid insertion. Then, i'll go on to the next one and repeat the process.
+            If we get to a point were no numbers are valid, we go back to the previous inserted number
+            and change it to the next possible number. Then go back to the next one.
+        </p>
+        <p>Example:</p>
+        <p><img src="SudokuIMG.png" alt="exampleBoard" width="30%" margin-left="30%"></p>
+        <p>This is a 9x9 board: board size is 9</p>
+        <p>Sudoku elements: </p>
+        
+        <p> 0 2 0 0 0 3 8 0 5<br>
+            0 0 5 6 0 0 0 0 3<br>
+            0 0 0 0 0 0 7 9 0<br>
+            8 0 0 0 4 0 0 0 0<br>
+            3 0 0 0 0 0 1 0 8<br>
+            0 0 6 0 9 0 0 0 0<br>
+            1 3 0 0 7 0 5 0 0<br>
+            0 0 0 0 0 2 0 0 7<br>
+            0 0 4 0 0 0 0 0 0</p>
+        
+        <p>This will return something like this:</p>
+        <p>Your Board: <br>
+            _   _   _   _   _   _   _   _   _ <br>
+           |  0  2  0  |  0  0  3  |  8  0  5  |<br>
+           
+           |  0  0  5  |  6  0  0  |  0  0  3  |<br>
+          
+           |  0  0  0  |  0  0  0  |  7  9  0  |<br>
+            _   _   _   _   _   _   _   _   _ <br>
+           |  8  0  0  |  0  4  0  |  0  0  0  |<br>
+          
+           |  3  0  0  |  0  0  0  |  1  0  8  |<br>
+          
+           |  0  0  6  |  0  9  0  |  0  0  0  |<br>
+            _   _   _   _   _   _   _   _   _ <br>
+           |  1  3  0  |  0  7  0  |  5  0  0  |<br>
+           
+           |  0  0  0  |  0  0  2  |  0  0  7  |<br>
+          
+           |  0  0  4  |  0  0  0  |  0  0  0  |<br>
+            _   _   _   _   _   _   _   _   _ <br></p>
+        <p>The solved puzzle should be printed:</p>
+        <p>Solved in 2 milliseconds!<br>
+            _   _   _   _   _   _   _   _   _ <br>
+           |  4  2  7  |  9  1  3  |  8  6  5  |<br>
+          
+           |  9  1  5  |  6  8  7  |  2  4  3  |<br>
+          
+           |  6  8  3  |  2  5  4  |  7  9  1  |<br>
+            _   _   _   _   _   _   _   _   _ <br>
+           |  8  7  1  |  3  4  5  |  6  2  9  |<br>
+          
+           |  3  4  9  |  7  2  6  |  1  5  8  |<br>
+          
+           |  2  5  6  |  8  9  1  |  3  7  4  |<br>
+            _   _   _   _   _   _   _   _   _ <br>
+           |  1  3  2  |  4  7  9  |  5  8  6  |<br>
+          
+           |  5  9  8  |  1  6  2  |  4  3  7  |<br>
+          
+           |  7  6  4  |  5  3  8  |  9  1  2  |<br>
+            _   _   _   _   _   _   _   _   _ <br></p>
+        
+
+        <p>Try it yourself:</p>
+        <p><a href="https://github.com/lthomazi/sudokuSolver/blob/master/SudokuSolver.java" target="_blank">Github</a></p>
+        
+           
+            
+
+        <section class="bottom"></section>
+    </body>

@@ -1,0 +1,185 @@
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 3.2rem;
+    inherits: h1;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80%;
+  padding-left: 5%;
+  padding-right: 5%;
+  word-wrap: normal;
+}
+
+iframe {
+  align-self: center;
+  transform: translate(170%);
+}
+
+/* img{
+  width: 30%;
+  padding-left: 30%;
+  align-items: center;
+} */
+
+
+
+a {
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+}
+
+a:hover{
+  border-radius: 25%;
+  background-color: #0b0020;
+  text-decoration: underline;
+}
+
+ul{
+  font-size: 1.5rem;
+  text-align: left;
+  width: 80%;
+  padding-left: 40%;
+  padding-right: 5%;
+  word-wrap: normal;
+}
+
+body {
+  padding-top: 0%;
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  color: white;
+  background: #202731;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+  padding-top: 100px;
+}
+
+
+
+.title {
+  aspect-ratio: 300/100;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url('./title.svg');
+}
+
+
+.spacer {
+  aspect-ratio: 960/500;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.bottom {
+  aspect-ratio: 2;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-image: url('./bottom.svg');
+}
+
+.bottomMain {
+  aspect-ratio: 2;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('./bottomMainPage.svg');
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 400px;
+  padding-top: 1px;
+}
+
+
+
+.blue {
+  background: #001220;
+}
+
+.red {
+  background: #FA7268;
+}
+
+.pink {
+  background: #C62368;
+  overflow: hidden;
+}
+
+.dark {
+  background: #0f0f10;
+}
+
+/* Bubble bg with plain CSS */
+
+.bubble::after {
+  content: '';
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  background-color: #0f0f10;
+  height: 85%;
+}
+
+
+/* SVG background image via https://haikei.app/ */
+
+.flip {
+  transform: rotate(180deg);
+}
+
+/* Blobs SVG background image via https://haikei.app/ */
+
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+  z-index: 0;
+}
+
+.blob-content {
+  z-index: 1;
+}
+
+.blobs {
+  width: 100%;
+  background: url('./blobs.svg') no-repeat bottom / cover;
+}
+

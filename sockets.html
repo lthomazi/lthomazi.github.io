@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- HELLO -->
+<html lang="en">
+  <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Thomazi</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100%253B400%253B900&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+  </head>
+
+
+
+
+<!-- Title Page section-->
+
+  <body class="blue bottom">
+        <a href="index.html">Back to main page</a>  
+        <div>
+                <section>
+                        <h1>ESP32 Sockets</h1>
+                        
+                        <p>
+                        This is a small project I did for the Mechatronics class i’m taking this semester. 
+                        I used an ESP32. It’s a microcontroller with WiFi, Bluetooth, and two cores with allows me to create threads.
+                        The goal of the project was to use an ESP32 to control the brightness of three individual LEDs using PWM and Python to deploy an HTML page accessed over wifi.
+                        </p>
+
+                        <p>
+                                How? Well, first I needed to connect it to WiFi, obviously. It was easy. I just used python’s WiFi library.
+
+                                Then, I had to set up a socket. That allows for communication between the client and the server. 
+                                For this project, we had to use TCP as the message protocol and an IPv4 socket.
+                                
+                                Once a connection was accepted, the client (me) was able to send POST requests to the server (ESP32). 
+                                My code would then read that data and change the state of a a single or multiple LEDs and update the webpage.
+                                
+                                It would keep doing that for as long as there was an Internet connection     
+                        </p>
+
+                        <h3>Here are the general steps:</h3>
+                        <ol>    <li><p>WiFi</p></li>
+                                <li><p>Socket using TCP</p></li>
+                                <li><p>Listen for any connections</p></li>
+                                <li><p>Accept Connection</li></p>
+                                <li><p>Client sends POST request</li></p>
+                                <li><p>Read Data and Update Web Page</p>
+                                <li><p>Repeat Step 3</p></li>
+                        </ol>
+                        
+                        <div></div>
+                        <p><a href="https://github.com/lthomazi/ESPSockets">See full implementation</a></p>
+
+                        <h2>So what?</h2>
+                        <h3>That isn't very impressive...</h3>
+                        <p>
+                                Yes, so what? That wasn’t very impressive. 
+
+                                I agree! It wasn’t supposed to be. 
+                                This project isn’t my favorite because it’s impressive.
+                                It’s my favorite because it taught me about something I didn’t know before but I was curious about.
+                                
+                                Ever since I got into computer science, I wanted to understand more about how computers communicate between themselves.
+                                Here I learned one type of communication but there are still many more I could learn about. 
+                        </p>
+
+                        <h2>Now I can work on harder projects</h2>
+                        <p>Now that I have more knowledge about the ESP and communication protocols I can work on harder projects.</p>
+                        
+                        
+                        <li><p>Maybe an autonomous garden with sensors and actuators that I can control over the internet.</p></li>
+                        <li><p>Maybe a whole smart home system controlled with multiple ESP’s that can communicate between themselves.</p></li>
+                        <li><p>Or maybe a compact and widely compatible kit that can transform existing vehicles into fully self-driving vehicles…</p></li>
+
+                        
+                </section>
+
+                
+                
+        </div>
+        <section class="bottom">
+                <a href="https://docs.google.com/presentation/d/1Zf-2qnKFfRkcZZBmHMrmQIP5JbSz7ps0Vy2lVNkPwI0/edit?usp=sharing">Slides</a>
+        </section>
+  </body>
+</html>
