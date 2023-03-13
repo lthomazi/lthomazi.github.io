@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lucas Thomazi</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet" />
+
+        <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+    </head>
+
+    <body class="blue bottom">
+        <a href="index.html">Back to main page</a>  
+       
+        <h1>Getting Started With the RPI Pico W</h1>
+       
+        <p>During college, I had the chance to work with a few different microcontrollers, which was around the same time that I discovered my passion for coding. While working as a Teaching Fellow for an electronics class, I was able to experiment with an Arduino Uno and found it to be an enjoyable experience. As I started to comprehend the capabilities and potential uses of this amazing little machine, I registered for an elective course that introduced me to the ESP32. This microcontroller was even more powerful, featuring built-in Bluetooth and WiFi, allowing me to perform some very impressive tasks. However, the ESP32 was incredibly unreliable, forcing me to purchase a second board. It was during this same period that the Raspberry Pi Foundation released the Pico W, another small computer with built-in wireless connectivity, much like the ESP32. Not only was the Pico W much more reliable, but it was also more affordable and cuter, so I knew I had to get one.</p>
+
+        
+        <section>
+        <h3>Here's a very quick Getting Started Guide with the Pico W and Thonny (IDE)</h3>
+        <ol>    
+            <li><p>Download the correct MicroPython UF2 file for your board <a href="https://micropython.org/download/rp2-pico-w/rp2-pico-w-latest.uf2">*here*</a> </p></li>
+            <li><p>Plug the board in, holding down the BOOTSEL button, drag and drop the UF2 file</p></li>
+            <li><p>Plug it back in and open Thonny</p></li>
+            <li><p>Select the interpreter in the bottom right</li></p>
+            <!-- micropython thonny img-->
+            <p><img src="thonny_interpreter.png" alt="thonny_interpreter" width="50%" margin-left="30%"></p>
+            <li><p>Type in the shell the following: print(“hello world”)</li></p>
+            <li><p>You should be good to go!</p></li>
+
+        </ol>
+        </section>
+        
+
+        <section>
+        <h3>Your First Project</h3>
+        <p>The "Hello World" of microcontrollers: blinking an LED</p>
+        
+    
+        <p>In Thonny, type:</p>
+            <pre>
+                # Pin allows us to control the pins
+                from machine import Pin
+                
+                # We need time to sleep (pause) the device
+                import time
+                
+                # Defining a Pin object as the built in LED
+                # To select a different digital pin to control, we need to specify its number
+                # Uncomment the following line to control digital pin 5 (GPIO 3)
+                # led = Pin(3, Pin.OUT)
+                led = Pin("LED", Pin.OUT)
+
+                
+                # Infinite loop to blink LED
+                while True:
+                    print("Blink!")
+                    led.on()
+                    time.sleep(1)
+                    led.off()
+                    time.sleep(1)
+                </pre>
+
+        <p>Your LED should now be blinking</p>
+        </section>
+
+        <section>
+            <p> Lets try something a little harder</p>
+            <h3>Reading a voltage using the ADC</h3>
+            
+            <p>Wire it up as follows</p>
+            <!--pot wiring img-->
+            <p><img src="pot_wiring.png" alt="pot_wiring" width="50%" margin-left="30%"></p>
+            <p>In Thonny, type:</p>
+            <pre>
+                from machine import Pin, ADC
+                from time import sleep
+
+                # Set up a potentiometer with outer pins at 3.3V and gnd,
+                # and the middle pin connected to GPIO pin 26
+
+                # ADC functionality is available on pin 26
+
+                adc = ADC(Pin(26))     # create an ADC object 
+
+                while True:
+                    v = adc.read_u16()    # read raw value from 0 to (2^16)-1 (65535)
+                    print(f'read_u16: {v}')
+                    sleep(0.1)
+    
+                # 12-bit ADC, so read_u16() resolution is 2^4 since 2^(12+4) = 2^16
+                </pre>
+                
+                <p>And you should get something like: </p>
+                <pre>read_u16: 32920</pre>
+
+                <p>To get a voltage, we need to do some math to this number according to the following formula</p>
+                <p>Voltage = (code*V_FSR)/(2^m)</p>
+                <p>Where:</p>
+                <li>code is what the adc.read() returns</li>
+                <li>V_FSR is the full scale range voltage (3.3V)</li>
+                <li>m is the resolution (16 bits)</li>
+
+                <p>You can change the print line to “print(f'read_u16: {v*3.3/(2**16)} V')” to print it as a Voltage. Keep in mind you can only read up to V_FSR. To read higher voltages, you'll need more circuitry.</p>
+        </section>
+        <p>&nbsp;</p>
+
+        <p><img src="pi_pins.png" alt="pi_pins" width="100%" margin-left="30%"></p>
+        <p>Click<a href="https://docs.google.com/document/d/1LMAvcNA08-la7XPEFPgXilP_mvXKFekm1dgJfj1zW3U/edit?usp=sharing">here</a>if page doesn't load correctly</p>
+        <section class="bottom"></section>
+    </body>

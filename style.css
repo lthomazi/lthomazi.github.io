@@ -5,20 +5,17 @@ h1 {
 
 h2{
     font-size: 3.2rem;
-    inherits: h1;
+    text-align: center;
 }
 
 h3 {
   font-size: 2rem;
   text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 p {
   font-size: 1.5rem;
   text-align: center;
-  width: 80%;
   padding-left: 5%;
   padding-right: 5%;
   word-wrap: normal;
@@ -26,7 +23,6 @@ p {
 
 iframe {
   align-self: center;
-  transform: translate(170%);
 }
 
 /* img{
@@ -42,7 +38,7 @@ a {
   font-size: 1.5rem;
   color: white;
   padding: 0.5rem 0.5rem;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover{
