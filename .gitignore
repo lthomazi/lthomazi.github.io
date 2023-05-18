@@ -1,2 +1,5 @@
-!*.html
-!*.css
+*.txt
+
+*.png
+
+*.svg
