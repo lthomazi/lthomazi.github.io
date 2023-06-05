@@ -27,10 +27,11 @@ p {
 }
 
 
-
+/*
 iframe {
   align-self: center;
 }
+*/
 
 /* img{
   width: 30%;
@@ -42,7 +43,6 @@ iframe {
 
 a {
   align-items: center;
-  font-size: 1.2rem;
   color: white;
   padding: 0.5rem 0.5rem;
   text-decoration: underline;
