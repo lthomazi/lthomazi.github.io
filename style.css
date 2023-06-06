@@ -150,7 +150,8 @@ section {
 
 #arrow {
   position: relative;
-  left: 50%;
+  bottom: 10%;
+  left: 49%;
   transform: translateX(-50%);
   z-index: 100;
   animation: bounce 2s infinite;
