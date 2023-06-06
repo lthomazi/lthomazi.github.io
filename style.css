@@ -84,7 +84,7 @@ section {
 
 
 .title {
-  aspect-ratio: 300/100;
+
   width: 100%;
   background-repeat: no-repeat;
   background-position: top;
@@ -146,6 +146,29 @@ section {
 
 .dark {
   background: #0f0f10;
+}
+
+#arrow {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  animation: bounce 2s infinite;
+  color: #ffffff;
+  font-size: 50px;
+  padding-left: 50%;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-30px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-15px);
+  }
 }
 
 /* Bubble bg with plain CSS */
