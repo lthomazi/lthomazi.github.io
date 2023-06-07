@@ -21,6 +21,7 @@
 <!-- Title Page section-->
 
   <body>
+
     <div class="title">
       <section>
         <h1>Hello World!</h1>
@@ -39,6 +40,7 @@
 <!-- About me section -->
 
     <section class="blue">
+      
         <h2>About Me</h2>
         <p>
           In 2018, I moved from São Paulo to the United States to attend the University of Maryland. In May 2023, I graduated with a Bachelor's degree in Mechanical Engineering, having gained considerable knowledge in Computer Science. Most of my experience comes from academic tasks and personal initiatives, such as creating my own Unix Shell in C, a version of Grep, an OCaml interpreter, and several Machine Learning and Data Science projects. Some of these projects can be viewed here, while others are confidential school assignments (like my version of the Unix shell) and therefore cannot be shared publicly. However, I would be glad to provide additional information if asked.
@@ -65,8 +67,37 @@
     </section>
 
 
-<!-- Contact Section -->
     <section class="bottomMain">
+      <!-- Gears on the left side -->
+      <img id="gear1" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear2" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear3" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear4" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear5" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear6" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear7" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      
+      <!-- Gears on the right side -->
+      <img id="gear8" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear9" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear10" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear11" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear12" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear13" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      <img id="gear14" class="gear" src="cog-configure-gear-svgrepo-com.svg" alt="Gear image">
+      
+      
+    <script>
+        window.onscroll = function () {
+            var rotateDegrees = window.pageYOffset / 2;
+            for (var i = 1; i <= 20; i++) {
+                var direction = i % 2 === 0 ? -1 : 1;
+                document.getElementById('gear' + i).style.transform = 'rotate(' + direction * rotateDegrees + 'deg)';
+            }
+        };
+    </script>
+      
+    <!-- Contact Section -->
       <div class="blob-content">
         <h1>Send me a message!</h1>
         <p><a href = "mailto: lthomazi00@gmail.com?subject = Feedback&body = Message">Email</a></p>

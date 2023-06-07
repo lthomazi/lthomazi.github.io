@@ -172,6 +172,36 @@ section {
   }
 }
 
+.gear {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+}
+
+/* Position gears on the left */
+
+#gear1 { top: 7%; left: -40px; transform: rotate(30deg); }
+#gear2 { top: 14%; left: -50px; transform: rotate(60deg); }
+#gear3 { top: 21%; left: -40px; transform: rotate(90deg); }
+#gear4 { top: 28%; left: -50px; transform: rotate(120deg); }
+#gear5 { top: 35%; left: -40px; transform: rotate(150deg); }
+#gear6 { top: 42%; left: -50px; transform: rotate(180deg); }
+#gear7 { top: 49%; left: -40px; transform: rotate(210deg); }
+
+
+
+/* Position gears on the right */
+
+#gear8 { top: 7%; right: -40px; transform: rotate(30deg); }
+#gear9 { top: 14%; right: -50px; transform: rotate(60deg); }
+#gear10 { top: 21%; right: -40px; transform: rotate(90deg); }
+#gear11 { top: 28%; right: -50px; transform: rotate(120deg); }
+#gear12 { top: 35%; right: -40px; transform: rotate(150deg); }
+#gear13 { top: 42%; right: -50px; transform: rotate(180deg); }
+#gear14 { top: 49%; right: -40px; transform: rotate(210deg); }
+
+
+
 /* Bubble bg with plain CSS */
 
 .bubble::after {
